@@ -45,7 +45,7 @@ recs = humidity_data.get_data_by_area(rec_area=test_area)
 print("\nHouse Humidity sensor records for area {} = {}".format(test_area, len(recs)))
 print("\tAverage: {} humidity".format(mean(recs)))
 
-particule_data = ParticleData(data)
+particle_data = ParticleData(data)
 rec = particule_data.get_data_by_area(rec_area=test_area)
 print("\nHouse Particle sensor records for area {} = {}".format(test_area, len(recs)))
 concentrations = particule_data.get_data_concentrations(data=recs)
