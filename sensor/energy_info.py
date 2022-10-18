@@ -1,5 +1,5 @@
 from house_info import HouseInfo
-from datetime import datetime
+from datetime import date, datetime
 
 class EnergyData(HouseInfo):
     ENERGY_PER_BULB = 0.2
