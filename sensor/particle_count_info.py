@@ -1,6 +1,6 @@
 from house_info import HouseInfo
 from datetime import date
-from particle_count_info import ParticleData
+
 
 
 class ParticleData(HouseInfo):
@@ -23,7 +23,7 @@ class ParticleData(HouseInfo):
         for rec in data:
             if rec <= 50.0:
                 particulate["good"] += 1
-            elif rec > 50.0 and rec <= 100.0:
+            elif rec > 50.0 and rec <= 100:
                 particulate["moderate"] += 1
             else:
                 particulate["bad"] += 1
