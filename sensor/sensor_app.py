@@ -4,6 +4,8 @@ from house_info import HouseInfo
 from datetime import date, datetime
 from temperature_info import TemperatureData
 from humidity_info import HumidityData
+from statistics import mean
+from particle_count_info import ParticleData
 
 ##############################
 # Do not remove these two lines
@@ -42,3 +44,11 @@ humidity_data = HumidityData(data)
 recs = humidity_data.get_data_by_area(rec_area=test_area)
 print("\nHouse Humidity sensor records for area {} = {}".format(test_area, len(recs)))
 print("\tAverage: {} humidity".format(mean(recs)))
+
+particule_data = ParticleData(data)
+rec = particule_data.get_data_by_area(rec_area=test_area)
+print("\nHouse Particle sensor records for area {} = {}".format(test_area, len(recs)))
+concentrations = particule_data.get_data_concentrations(data=recs)
+print("\tGood Air Quality Recs: {}".format(concentrations["good"]))
+print("\tModerate Air Quality Recs: {}".format(concentrations["moderate"]))
+print("\tBad Air Quality Recs: {}".format(concentrations["bad"]))
