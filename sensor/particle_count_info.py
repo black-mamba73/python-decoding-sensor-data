@@ -1,5 +1,6 @@
 from house_info import HouseInfo
 from datetime import date
+from particle_count_info import ParticleData
 
 
 class ParticleData(HouseInfo):
